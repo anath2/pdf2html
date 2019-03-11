@@ -5,12 +5,15 @@ Application entry point
 import os
 from flask import Flask
 
+from . import index
+
 
 def create_app(test_config=None):
     '''
     Application factory
     '''
     app = Flask(__name__, instance_relative_config=True)
+    app.register_blueprint(index.bp)
 
     app.config.from_mapping(
         SECRET_KEY='dev',
@@ -23,9 +26,5 @@ def create_app(test_config=None):
         app.config.from_pyfile('config.py', silent=True)
 
     os.makedirs(app.instance_path, exist_ok=True)
-
-    @app.route('/')
-    def test():
-        return 'Hello world!'
 
     return app
