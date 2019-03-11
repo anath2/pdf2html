@@ -1,0 +1,15 @@
+<!doctype html>
+
+<title>{% block title %}{% endblock %} - PDF2HTML</title>
+
+<nav>
+    <h1>PDF2HTML</h1>
+    <ul>
+        {% block nav %}{% endblock %}
+    </ul>
+</nav>
+
+<section class="content">
+    <header>{% block header %}{% endblock %}</header>
+    {% block content %}{% endblock %}
+</section>
