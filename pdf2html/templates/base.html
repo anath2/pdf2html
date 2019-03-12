@@ -5,11 +5,11 @@
 <nav>
     <h1>PDF2HTML</h1>
     <ul>
-        {% block nav %}{% endblock %}
+        <li> <a href="{{ url_for('pdf2html.index') }}">Home</a></li>
+        <li> <a href="{{ url_for('pdf2html.about') }}">About</a></li>
     </ul>
 </nav>
 
 <section class="content">
-    <header>{% block header %}{% endblock %}</header>
     {% block content %}{% endblock %}
 </section>
