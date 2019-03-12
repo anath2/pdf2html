@@ -1,7 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
 <form>
-    <input name="input" type="file" />
-    <input type="submit" value="Generate" />
+    <div class="field">
+        <div class="file is-info has-name is-right is-fullwidth">
+            <label class="file-label">
+                <input class="file-input" type="file" name="resume">
+                <span class="file-cta">
+                    <span class="file-icon">
+                        <i class="fas fa-upload"></i>
+                    </span>
+                    <span class="file-label">
+                        Upload
+                    </span>
+                </span>
+                <span class="file-name">Filename...</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="control has-text-centered">
+        <button class="button is-primary is-large">Get HTML</button>
+    </div>
 </form>
 {% endblock %}
