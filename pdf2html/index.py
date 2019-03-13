@@ -2,7 +2,6 @@
 Entrypoint view
 '''
 
-import functools
 from flask import render_template, Blueprint, request, redirect
 
 from . import core
