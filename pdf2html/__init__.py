@@ -26,5 +26,4 @@ def create_app(test_config=None):
         app.config.from_pyfile('config.py', silent=True)
 
     os.makedirs(app.instance_path, exist_ok=True)
-
     return app
